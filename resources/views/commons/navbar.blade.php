@@ -1,6 +1,6 @@
 <header class="mb-4">
-    <nav class="navbar navbar-expand-sm navbar-light"> 
-        <a class="navbar-brand" href="/">ボディメイクClub</a>
+    <nav class="navbar navbar-expand-sm navbar-dark bg-warning"> 
+        <a class="navbar-brand" href="/" style="color: rgba(0,0,0,.5);">ボディメイクClub</a>
         <ul class="nav">
             <li class="nav-item nav-link">{!! link_to_route('welcome', 'トップ', [],  ['style' => 'color: rgba(0,0,0,.5)']) !!}</li>
             <li class="nav-item nav-link">{!! link_to_route('overview', 'ボディメイクClubとは', [], ['style'=>'color: rgba(0,0,0,.5)']) !!}</li>
@@ -15,7 +15,7 @@
             <ul class="navbar-nav">
                 @if (Auth::check())
                     <li class="nav-item dropdown">
-                        <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">{{ Auth::user()->name }}</a>
+                        <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" style="color: rgba(0,0,0,.5);">{{ Auth::user()->name }}</a>
                         <ul class="dropdown-menu dropdown-menu-right">
                             <li class="dropdown-item">{!! link_to_route('users.favorites','お気に入り一覧', ['id'=>Auth::id()], ['style' => 'color: black']) !!}</li>
                             <li class="dropdown-divider"></li>
@@ -30,7 +30,7 @@
                         </ul>
                     </li>
                 @else
-                    <li class="nav-item">{!! link_to_route('login', 'マイページ', [], ['class' => 'nav-link']) !!}</li>
+                    <li class="nav-item">{!! link_to_route('login', 'マイページ', ['class' => 'nav-link'], ['style' =>'color: rgba(0,0,0,.5)']) !!}</li>
                 @endif
                 </div>
             </ul>
