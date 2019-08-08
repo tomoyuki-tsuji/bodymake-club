@@ -45,7 +45,7 @@
                                 {!! Form::password('password', ['class' => 'form-control']) !!}
                             </div>
 
-                            {!! Form::submit('ログイン', ['class' => 'btn btn-primary btn-sm']) !!}
+                            {!! Form::submit('ログイン', ['class' => 'btn btn-warning btn-sm']) !!}
                         {!! Form::close() !!}
                     
                     <p class="text-center">登録まだの方は</p>
