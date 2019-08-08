@@ -56,7 +56,7 @@ class MicropostsController extends Controller
     {
         $this->validate($request, [
             'content' => 'required|max:191',
-            'picture' => ['required','file', 'image', 'mimes:jpeg,png']
+            'picture' => 'required',
         ]);
         
         $micropost = new Micropost;
